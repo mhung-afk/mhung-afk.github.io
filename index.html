@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For my love</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('https://storage.pixteller.com/designs/designs-images/2019-03-27/05/love-and-passion-background-backgrounds-romantic-1-5c9b9947439b9.png');
+        }
+
+        .content {
+            margin: 50px auto auto auto;
+            width: 75vw;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgba(207, 148, 180, 0.6);
+            columns: 2;
+        }
+
+        #image {
+            width: 32vw;
+        }
+
+        #text {
+            display: flex;
+            color: #af2f2f;
+            padding: auto;
+            text-align: center;
+        }
+
+        #text {
+            animation-name: appear;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #notice {
+            margin-top: 10px;
+            text-align: center;
+            color: #dc3232;
+            font-size: larger;
+        }
+
+        audio {
+            margin: 10px;
+            position: fixed;
+            bottom: 5px;
+        }
+
+        #copyright {
+            position: fixed;
+            bottom: 5px;
+            color: gray;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    hello my love!
+    <div class="content" id="div1">
+        <img id="image">
+        <div id="text"></div>
+    </div>
+
+    <p id="notice">The gift for my love!</p>
+    <a href="https://github.com/mhung-afk" target="_blank" id="copyright">Implemented by mhung-afk</a>
+
+    <audio autoplay loop  id="playAudio">
+        <source src="My Love Westlife.mp3" type="audio/mpeg">
+    </audio>
+
+    <iframe src="My Love Westlife.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe> 
+
+    <script src="https://cdn.jsdelivr.net/gh/evaristocuesta/pict2pix@0.4.0/dist/pict2pix.min.js"></script>
+    <script src="./figlet.min.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
